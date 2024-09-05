@@ -3,6 +3,9 @@ const diaMesAno = document .getElementById("dia-mes-ano");
 const horaMinSeg = document .getElementById("hora-min-seg"); 
 const arrayDayWeek = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"]
 
+const dialogPonto = document .getElementById("dialog-ponto");
+dialogPonto.showModal(); 
+
 function daySemana() {
     const date = new Date();
     return arrayDayWeek[date.getDay()]
