@@ -18,6 +18,11 @@ function horaCompleta() {
     return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 }
 
+function atualizaHora() {
+    horaMinSeg.textContent = horaCompleta();    
+}
+
+setInterval(atualizaHora, 1000); 
+
 diaSemana.textContent = daySemana();
 diaMesAno.textContent = dataCompleta();
-horaMinSeg.textContent = horaCompleta();
