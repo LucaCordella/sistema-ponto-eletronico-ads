@@ -3,8 +3,19 @@ const diaMesAno = document .getElementById("dia-mes-ano");
 const horaMinSeg = document .getElementById("hora-min-seg"); 
 const arrayDayWeek = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"]
 
+
 const dialogPonto = document .getElementById("dialog-ponto");
-dialogPonto.showModal(); 
+
+const btnRegistrarPonto = document .getElementById("btn-registrar-ponto");
+btnRegistrarPonto.addEventListener("click", () => {
+    dialogPonto.showModal();
+});
+
+const btnDialogFechar = document .getElementById("btn-dialog-fechar");
+btnDialogFechar.addEventListener("click", () => {
+    dialogPonto.close();
+})
+
 
 function daySemana() {
     const date = new Date();
