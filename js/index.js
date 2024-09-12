@@ -39,6 +39,18 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
         "id": 1
     }
 
+    //TO-DO:
+    //Somente o último registro está sendo salvo
+    //Como resolver isso, de modo que eu persista todos os pontos?
+    
+    localStorage.setItem("Registro", JSON.stringify(ponto));
+
+    //TO-DO:
+    //Salvar o último tipo do ponto registrado pelo usuário
+    //Fazer o select considerar esse último ponto e selecionar, por padrão
+    //o próximo possível ponto do usuário
+    //Exemplo: usuário registrou "entrada", determinar que o select apresente "intervalo" como valor padrão
+
     console.log(ponto);
 });
 
