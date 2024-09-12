@@ -10,3 +10,4 @@ To-do:
     - Apresetar para o usuário a data e hora atalizados 
     - Atualizar a data todos os dias 00:00 
     - Atualizar a hora todo segundo
+    - Organizar Código
