@@ -14,8 +14,22 @@ navigator.geolocation.getCurrentPosition((position) => {
 });
 
 
-const btnRegistrarPonto = document .getElementById("btn-registrar-ponto");
+let proxPonto = {
+    "entrada": "intervalo",
+    "intervalo": "volta-intervalo",
+    "volta-intervalo": "saida",
+    "saida": "entrada"
+}
+
+
+const btnRegistrarPonto = document.getElementById("btn-registrar-ponto");
 btnRegistrarPonto.addEventListener("click", () => {
+    
+    let dialogSelect = document.getElementById("select-tipo-ponto");
+    let ultimoPonto = localStorage.getItem("tipoUltimoPonto");
+   
+    dialogSelect.value = proxPonto[ultimoPonto];
+    
     dialogPonto.showModal();
 });
 
@@ -27,31 +41,23 @@ btnDialogFechar.addEventListener("click", () => {
 
 const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
 btnDialogRegistrarPonto.addEventListener("click", () => {
-
+    
     let data = dataCompleta();
     let hora = horaCompleta();
     let tipoPonto = document.getElementById("select-tipo-ponto").value;
-
+   
     let ponto = {
         "data": data,
         "hora": hora,
         "tipo": tipoPonto,
         "id": 1
     }
-
-    //TO-DO:
-    //Somente o último registro está sendo salvo
-    //Como resolver isso, de modo que eu persista todos os pontos?
     
     localStorage.setItem("Registro", JSON.stringify(ponto));
-
-    //TO-DO:
-    //Salvar o último tipo do ponto registrado pelo usuário
-    //Fazer o select considerar esse último ponto e selecionar, por padrão
-    //o próximo possível ponto do usuário
-    //Exemplo: usuário registrou "entrada", determinar que o select apresente "intervalo" como valor padrão
+    localStorage.setItem("tipoUltimoPonto", tipoPonto);
 
     console.log(ponto);
+    dialogPonto.close();
 });
 
 
