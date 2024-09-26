@@ -21,6 +21,12 @@ let proxPonto = {
     "saida": "entrada"
 }
 
+    
+// TO-DO:
+// apresentar para o usuário a data e hora atualizados
+// atualizar a data todos os dias 00:00
+// atualizar a hora todo segundo
+
 
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto");
 btnRegistrarPonto.addEventListener("click", () => {
@@ -39,6 +45,28 @@ btnDialogFechar.addEventListener("click", () => {
 })
 
 
+function recuperaPontosLocalStorage() {
+    let todosOsPontos = localStorage.getItem("registro");
+
+    if(!todosOsPontos) {
+        return [];
+    }
+
+    return JSON.parse(todosOsPontos);
+}
+
+
+function salvarRegistroLocalStorage(ponto) {
+    let pontos = recuperaPontosLocalStorage();
+
+    pontos.push(ponto);
+    // 1 - Recuperar os registros anteriores
+    // 2 - Adicionar o novo registro (ponto) no final do array de registros
+
+    localStorage.setItem("registro", JSON.stringify(pontos));
+}
+
+
 const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
 btnDialogRegistrarPonto.addEventListener("click", () => {
     
@@ -53,8 +81,23 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
         "id": 1
     }
     
+    // TO-DO:
+    // Somente o ultimo registro está sendo salvo
+    // Garantir que o código persista sempre o histórico todo
+    // Salvar os registros em um array de objetos de registro
+
+
+    salvarRegistroLocalStorage(ponto);
+
     localStorage.setItem("Registro", JSON.stringify(ponto));
     localStorage.setItem("tipoUltimoPonto", tipoPonto);
+
+    // TO-DO:
+    // salvar o útimo tipo do ponto registrado pelo usuário
+    // fazer o select considerar esse último ponto e selecionar, por padrão
+    // o próximo possível ponto do usuário
+    // Exemplo: usuário registrou "entrada", determinar que o select apresente "intervalo" como valor padrão
+    
 
     console.log(ponto);
     dialogPonto.close();
@@ -80,6 +123,7 @@ function atualizaHora() {
     horaMinSeg.textContent = horaCompleta();    
 }
 
+atualizaHora();
 setInterval(atualizaHora, 1000); 
 
 diaSemana.textContent = daySemana();
