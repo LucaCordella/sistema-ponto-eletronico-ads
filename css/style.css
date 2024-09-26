@@ -1,6 +1,5 @@
 /* Estilos gerais */
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -57,7 +56,6 @@ dialog {
     background-color: #ffffff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    text-align: center;
     width: 100%;
     max-width: 500px;
 }
@@ -77,6 +75,7 @@ dialog {
 }
 
 #btn-dialog-registrar-ponto {
+    width: 100%;
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
     border: none;
@@ -96,7 +95,7 @@ dialog {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     background-color: transparent;
     color: #f44336;
     border: none;
@@ -113,4 +112,21 @@ dialog {
     bottom: 0%;
     color: #333;
     background-color: #ccc;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+#div-alerta {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 15px;
+    position: fixed;
+    right: 15px;
+    top: 15px;
 }

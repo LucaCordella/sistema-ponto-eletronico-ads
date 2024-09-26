@@ -67,6 +67,9 @@ function salvarRegistroLocalStorage(ponto) {
 }
 
 
+const divAlerta = document.getElementById("div-alerta");
+
+
 const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
 btnDialogRegistrarPonto.addEventListener("click", () => {
     
@@ -101,6 +104,14 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
 
     console.log(ponto);
     dialogPonto.close();
+
+    divAlerta.classList.remove("hidden");
+    divAlerta.classList.add("show");
+
+    setTimeout(() => {
+        divAlerta.classList.remove("show");
+    divAlerta.classList.add("hidden")
+    }, 5000);
 });
 
 
