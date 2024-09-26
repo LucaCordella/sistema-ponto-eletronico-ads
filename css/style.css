@@ -1,16 +1,116 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    padding: 1rem;
+    color: #333;
+}
+
 .data-hora {
     text-align: center;
+    margin-bottom: 3rem;
+}
+
+.data-hora p {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #005f73;
+}
+
+#div-btn-registrar-ponto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#btn-registrar-ponto {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #008cba;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-registrar-ponto:hover {
+    background-color: #005f73;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+#dialog-ponto p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#select-tipo-ponto {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+#btn-dialog-registrar-ponto {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#btn-dialog-registrar-ponto:hover {
+    background-color: #388e3c;
 }
 
 #btn-dialog-fechar {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
     background-color: transparent;
+    color: #f44336;
     border: none;
-    font-size: 18px;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 #btn-dialog-fechar:hover {
-    color: rgb(200, 0, 0);  
+    background-color: #e7e7e7;
+}
+
+#id-rodape {
+    position: absolute;
+    bottom: 0%;
+    color: #333;
+    background-color: #ccc;
 }

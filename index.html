@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>Sistema de Controle de Ponto</title>
+
 </head>
 <body>
     
     <div class="data-hora">
+
         <p id="dia-semana">Segunda-Feira</p>
         <p id="dia-mes-ano">27/08/2024</p>
         <p id="hora-min-seg">08:45:38</p>
+
     </div>
 
     <dialog id="dialog-ponto">
+
         <p>Data</p>
         <p>Hora</p>
         
@@ -27,12 +36,19 @@
 
         <button id="btn-dialog-registrar-ponto">Registrar Ponto</button>
 
-        <button id="btn-dialog-fechar">X</button>    
+        <button id="btn-dialog-fechar">X</button>  
+
     </dialog>
 
-    <button id="btn-registrar-ponto">Frequência</button>
+    <div id="div-btn-registrar-ponto">
+
+        <button id="btn-registrar-ponto">Registrar Ponto!</button>
+    
+    </div>
 
     <script src="js/index.js"></script>
+
+    <footer id="id-rodape">Site em Desevolvimento - Sistema de Controle de Ponto (Luca Cordella) - 2024</footer>
 
 </body>
 </html>
