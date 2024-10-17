@@ -22,6 +22,8 @@ let proxPonto = {
 }
 
     
+let dialogHora = document.getElementById("dialog-hora");
+
 // TO-DO:
 // apresentar para o usuário a data e hora atualizados
 // atualizar a data todos os dias 00:00
@@ -36,6 +38,8 @@ btnRegistrarPonto.addEventListener("click", () => {
    
     dialogSelect.value = proxPonto[ultimoPonto];
     
+    //dialogHora.textContent = horaCompleta();
+
     dialogPonto.showModal();
 });
 
@@ -134,8 +138,15 @@ function atualizaHora() {
     horaMinSeg.textContent = horaCompleta();    
 }
 
+function atualizaHoraDialog() {
+    dialogHora.textContent = "Hora: " + horaCompleta();
+}
+
 atualizaHora();
 setInterval(atualizaHora, 1000); 
+
+atualizaHoraDialog()
+setInterval(atualizaHoraDialog, 1000);
 
 diaSemana.textContent = daySemana();
 diaMesAno.textContent = dataCompleta();
