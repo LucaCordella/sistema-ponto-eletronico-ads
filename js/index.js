@@ -4,7 +4,9 @@ const horaMinSeg = document .getElementById("hora-min-seg");
 const arrayDayWeek = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"]
 
 
-const dialogPonto = document .getElementById("dialog-ponto");
+const dialogPonto = document.getElementById("dialog-ponto");
+const dialogEditarRegitsro = document.getElementById("dialog-editar-registro");
+const dialogPontoPassado = document.getElementById("dialog-ponto-passado");
 
 
 function getUserLocation() {
