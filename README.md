@@ -2,7 +2,5 @@
 
 ## Sistema de Ponto Eletrônico
 
-🚀 Novo projeto da disciplina de programação web - ads
-
-➡️ Estamos desenvolvendo e colocando como prioridade a parte de JavaScript.
-➡️ Estamos sempre aprimorando mais e buscando aperfeiçoar nosso projeto. 
+🚀 Projeto da disciplina de programação web - ads
+💡 Desenvolvido por LucaCordella (gitHub), com ajuda do professor @airtonbjunior (gitHub)
