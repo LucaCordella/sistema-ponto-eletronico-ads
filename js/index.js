@@ -23,6 +23,9 @@ let proxPonto = {
 
     
 let dialogHora = document.getElementById("dialog-hora");
+let dialogData = document.getElementById("dialog-data");
+
+dialogData.textContent = "Data: " + dataCompleta();
 
 // TO-DO:
 // apresentar para o usuário a data e hora atualizados
