@@ -4,9 +4,10 @@ function criarRelatorio() {
 
     let registros = JSON.parse(localStorage.getItem("registro"));
     registros.forEach(registro => {
-        console.log(registros);
+        console.log(registro);
 
-        const divRegistros = document.createElement("div");
+        const divRegistro = document.createElement("div");
+        divRegistro.classList.add("abcd");
 
         // para cara registro, temos
         // hora: registro.hora (já está na variável hora)
@@ -17,10 +18,12 @@ function criarRelatorio() {
         let data = registro.data;
         let tipo = registro.tipo;
 
-        divRegistro.innerHTML = '<p> ${tipo} | ${data} | ${hora} </p><button>Editar</button><button>Excluir</button>'
+        divRegistro.innerHTML = `<p> ${tipo} | ${data} | ${hora} </p>`
+        const buttonEditar = document.createElement("button");
         
         // Adicionar botões
         containerRegistros.appendChild(divRegistro);
+        divRegistro.appendChild(buttonEditar);
     })
 
     /* 
