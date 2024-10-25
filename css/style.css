@@ -34,6 +34,19 @@ body {
     margin-bottom: 1rem;
 }
 
+#div-btn-editar-registro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#div-btn-ponto-passado {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Edição de estilo dos botões principais */
 #btn-registrar-ponto {
     font-size: 2rem;
     padding: 1rem 2rem;
@@ -44,11 +57,39 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 #btn-registrar-ponto:hover {
     background-color: #005f73;
 }
 
+#btn-editar-registro {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #008cba;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#btn-editar-registro:hover {
+    background-color: #005f73;
+}
+
+#btn-ponto-passado {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #008cba;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#btn-ponto-passado:hover {
+    background-color: #005f73;
+}
+
+/* Edição de estilo no dialog Registrar Ponto */
 dialog {
     border: none;
     border-radius: 10px;

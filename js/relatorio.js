@@ -34,3 +34,5 @@ function criarRelatorio() {
     */
 
 }
+
+criarRelatorio();
