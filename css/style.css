@@ -66,13 +66,13 @@ body {
     padding: 1rem 2rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: #008cba;
+    background-color: #87ad0a;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 #btn-editar-registro:hover {
-    background-color: #005f73;
+    background-color: #6e8b0d;
 }
 
 #btn-ponto-passado {
@@ -80,13 +80,13 @@ body {
     padding: 1rem 2rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: #008cba;
+    background-color: #13a126;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 #btn-ponto-passado:hover {
-    background-color: #005f73;
+    background-color: #0d6d1a;
 }
 
 /* Edição de estilo no dialog Registrar Ponto */

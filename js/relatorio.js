@@ -9,11 +9,6 @@ function criarRelatorio() {
         const divRegistro = document.createElement("div");
         divRegistro.classList.add("abcd");
 
-        // para cara registro, temos
-        // hora: registro.hora (já está na variável hora)
-        // data: registro.data
-        // tipo: registro.tipo
-
         let hora = registro.hora;
         let data = registro.data;
         let tipo = registro.tipo;
@@ -25,14 +20,6 @@ function criarRelatorio() {
         containerRegistros.appendChild(divRegistro);
         divRegistro.appendChild(buttonEditar);
     })
-
-    /* 
-    2. iterar sobre os registros
-    2.1 para cada registro, criar um elemento na página
-    2.2 Tipo | hora | obs? | anexo? | editar | excluir
-    2.3 agrupar registros por data
-    */
-
 }
 
 criarRelatorio();

@@ -5,8 +5,6 @@ const arrayDayWeek = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira"
 
 
 const dialogPonto = document.getElementById("dialog-ponto");
-const dialogEditarRegitsro = document.getElementById("dialog-editar-registro");
-const dialogPontoPassado = document.getElementById("dialog-ponto-passado");
 
 
 function getUserLocation() {
@@ -38,12 +36,6 @@ let dialogData = document.getElementById("dialog-data");
 
 dialogData.textContent = "Data: " + dataCompleta();
 
-// TO-DO:
-// apresentar para o usuário a data e hora atualizados
-// atualizar a data todos os dias 00:00
-// atualizar a hora todo segundo
-
-
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto");
 btnRegistrarPonto.addEventListener("click", () => {
     
@@ -51,8 +43,6 @@ btnRegistrarPonto.addEventListener("click", () => {
     let ultimoPonto = localStorage.getItem("tipoUltimoPonto");
    
     dialogSelect.value = proxPonto[ultimoPonto];
-    
-    //dialogHora.textContent = horaCompleta();
 
     dialogPonto.showModal();
 });
@@ -78,8 +68,6 @@ function salvarRegistroLocalStorage(ponto) {
     let pontos = recuperaPontosLocalStorage();
 
     pontos.push(ponto);
-    // 1 - Recuperar os registros anteriores
-    // 2 - Adicionar o novo registro (ponto) no final do array de registros
 
     localStorage.setItem("registro", JSON.stringify(pontos));
 }
@@ -104,24 +92,11 @@ btnDialogRegistrarPonto.addEventListener("click", async () => {
         "location": location,
         "id": 1
     }
-    
-    // TO-DO:
-    // Somente o ultimo registro está sendo salvo
-    // Garantir que o código persista sempre o histórico todo
-    // Salvar os registros em um array de objetos de registro
-
 
     salvarRegistroLocalStorage(ponto);
 
     localStorage.setItem("Registro", JSON.stringify(ponto));
     localStorage.setItem("tipoUltimoPonto", tipoPonto);
-
-    // TO-DO:
-    // salvar o útimo tipo do ponto registrado pelo usuário
-    // fazer o select considerar esse último ponto e selecionar, por padrão
-    // o próximo possível ponto do usuário
-    // Exemplo: usuário registrou "entrada", determinar que o select apresente "intervalo" como valor padrão
-    
 
     console.log(ponto);
     dialogPonto.close();
