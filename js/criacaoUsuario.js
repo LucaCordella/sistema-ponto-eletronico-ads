@@ -1,4 +1,5 @@
 const btnCriaUsuario = document.getElementById("btn-criar-usuario");
+
 btnCriaUsuario.addEventListener("click", async () => {
     
     const reposta = await fetch('http://localhost:3000/usuario', {
@@ -17,5 +18,4 @@ btnCriaUsuario.addEventListener("click", async () => {
     .catch(error => {
         console.log(error);
     });
-
 });
